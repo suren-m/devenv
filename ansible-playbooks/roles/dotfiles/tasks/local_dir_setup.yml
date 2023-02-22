@@ -1,0 +1,24 @@
+- name: check $Home
+  debug:
+    msg: "{{ lookup('env', 'HOME') }}"
+
+- name: setup local bin for user
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.local/bin"
+    state: directory
+
+- name: setup local share for user
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.local/share"
+    state: directory
+
+# For Go-based tools such as lazygit (see phase2 role)
+- name: setup bin dir for go tools
+  file:
+    path: "{{ lookup('env', 'HOME') }}/go/bin"
+    state: directory
+
+- name: setup src dir for go tools
+  file:
+    path: "{{ lookup('env', 'HOME') }}/go/src"
+    state: directory

@@ -1,0 +1,15 @@
+layout {
+    pane split_direction="vertical" {
+        pane 
+        pane split_direction="horizontal" {
+            pane 
+            pane {                 
+                command "k9s" 
+                args "--headless"               
+            }
+        }
+    }
+//    pane size=2 borderless=true {
+//        plugin location="zellij:compact-bar"
+//    }
+}

@@ -1,0 +1,35 @@
+---
+# If the play uses become:true then
+# ansible_env.HOME will point to /root whereas lookup('env', 'HOME') will be $HOME
+- debug: msg="ansible_env.home => {{ ansible_env.HOME }} and lookup('env', 'HOME') -> {{ lookup('env', 'HOME') }}"
+
+# ~/.config/shell/*
+
+# dir setup for dotfiles 
+- name: ~/.config/shell/ - setup shell config dir
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.config/shell"
+    state: directory
+
+# for cht.sh and other cli tools that'll be installed later
+- name: ~/.local/bin/ - setup local bin
+  file:
+    path: "{{ lookup('env', 'HOME') }}/.local/bin"
+    state: directory
+
+- name: zsh and zplug
+  become: true
+  package:
+    name: "{{ item }}"
+    state: "{{ zsh.state }}"
+  loop:
+    - bash-completion
+    - zsh
+    - zplug
+
+- include_tasks: starship.yml
+
+- include_tasks: utils.yml
+
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#- include_tasks: homebrew.yml

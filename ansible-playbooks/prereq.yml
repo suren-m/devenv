@@ -1,0 +1,50 @@
+- name: "prelaunch"
+  hosts: all
+  tags: prelaunch
+  gather_facts: yes # needed for distro vars such as below
+
+  pre_tasks:
+    - debug:
+        msg: "Env Home: {{ lookup('env', 'HOME') }}
+          OS Family: {{ ansible_os_family }},
+          Distro: {{ ansible_distribution }},
+          release: {{ ansible_distribution_release }},
+          Distro Major Ver: {{ ansible_distribution_major_version }},
+          Distro Ver: {{ ansible_distribution_version }},
+          Arch: {{ ansible_architecture }},
+          Target: {{ target.arch}} -  {{ target.platform }},
+          Interpreter: {{ ansible_python_interpreter }}"
+
+- name: "prereq"
+  hosts: all
+  tags: prereq
+  become: true
+
+  tasks:
+    - package:
+        upgrade: yes
+        update_cache: yes
+
+    - name: Make users passwordless for sudo in group sudo
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: "^%sudo"
+        line: "%sudo   ALL=(ALL:ALL) NOPASSWD: ALL"
+        validate: "visudo -cf %s"
+
+    - package:
+        name: "{{ item }}"
+      loop:
+        - git
+        - wget
+        - curl
+        - python3-dev
+        - python3-pip
+        - python3-setuptools
+        - python3-pexpect # needed for expect: (see homebrew install)
+        - python3-apt # needed for ansible --check
+        - unzip # needed for deno
+        - apt-transport-https # needed for dotnet
+
+# Make sure ansible_python_interpreter is using /usr/bin/python3

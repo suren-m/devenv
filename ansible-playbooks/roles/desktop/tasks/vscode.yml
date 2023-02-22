@@ -1,0 +1,26 @@
+- name: "VS Code - stat"
+  stat: 
+    path: /usr/bin/code
+  register: vscode_bin
+
+- when: not vscode_bin.stat.exists or vscode.reinstall == true
+  block:
+    - name: "VS Code - Download"
+      get_url:
+        url: "{{ vscode.download_link }}"
+        dest: /tmp/vscode.deb   
+        mode: 0755
+    - name: "VS Code - Install"
+      apt: 
+        deb: /tmp/vscode.deb # requires xz-utils        
+  always:
+    - name: "VS Code - Cleanup"
+      file:
+        path: /tmp/vscode.deb
+        state: absent
+
+
+  
+ 
+    
+

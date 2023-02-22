@@ -1,0 +1,17 @@
+vscode:
+   download_link: https://go.microsoft.com/fwlink/?LinkID=760868
+   reinstall: false
+   
+kvm:
+   state: present
+
+docker:
+   state: present
+
+nvidia_docker:
+   state: present
+   reinstall: false
+
+minikube:
+   download_link: https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+   reinstall: false

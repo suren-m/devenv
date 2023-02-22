@@ -1,0 +1,10 @@
+theme = "catppuccin_macchiato"
+
+[editor.file-picker]
+hidden = false # show dotfiles
+#git-ignore = true # don't show files in .gitignore
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
