@@ -2,15 +2,19 @@
 
 tools=(
        "ca-certificates"  
-       "cocoapods" 
+       "cocoapods"
+       "exa"
+       "gh"
        "helix" 
        "helm"
        "kustomize"
        "kubernetes-cli"
+       "lf"
        "minikube"
        "nvm"
        "ruby"
        "starship"
+       "zplug"
       )
 
 for i in ${tools[@]}; do 
