@@ -17,6 +17,7 @@ tools=(
        "nvm"
        "ruby"
        "starship"
+       "watchexec"
        "zplug"
       )
 

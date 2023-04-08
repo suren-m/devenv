@@ -1,0 +1,17 @@
+window:
+  dimensions:
+    columns: 0
+    lines: 0
+  option_as_alt: OnlyLeft
+  opacity: 1.0
+
+font:
+  normal:
+    style: Regular
+  size: 14.0
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+
