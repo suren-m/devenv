@@ -1,0 +1,34 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.formatOnSave": true,
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "files.autoSave": "afterDelay",
+    "html.autoClosingTags": false,
+    "workbench.colorTheme": "Nord",
+    "window.zoomLevel": 1,
+    // Extensions
+    "liveServer.settings.donotShowInfoMsg": true,
+    "rust-analyzer.updates.askBeforeDownload": false,
+    "rust-analyzer.inlayHints.enable": true,
+    // vim
+    // Toggle inlay hints   
+    // ctrl + k and ctrl + i for showing docs (gh for vim extension)    
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    //"vim.leader": "<backspace>",
+    "vim.handleKeys": {
+        // "<C-a>": false,
+        // "<C-c>": false,
+        // "<C-x>": false,
+        "<C-f>": false,
+        "<C-k>": false
+    },
+    // Only if required
+    "vim.hlsearch": true,
+}
