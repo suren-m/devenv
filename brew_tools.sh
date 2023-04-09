@@ -1,9 +1,11 @@
 #!/bin/bash
 
 tools=(
+       "bat"
        "ca-certificates"  
        "cocoapods"
        "exa"
+       "fd"
        "gh"
        "gopls"
        "dlv"
@@ -15,7 +17,10 @@ tools=(
        "lazygit"
        "minikube"
        "nvm"
+       "neovim"
        "ruby"
+       "ripgrep"
+       "rust-analyzer"
        "starship"
        "watchexec"
        "zplug"
@@ -30,3 +35,6 @@ echo "fonts"
 
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
+
+brew tap redis-stack/redis-stack
+brew install redis-stack-redisinsight 
