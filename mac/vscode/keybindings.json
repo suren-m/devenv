@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaults
 [
     {
         "key": "cmd+alt+h",
@@ -20,6 +19,17 @@
         "key": "shift+space",
         "command": "workbench.action.terminal.toggleTerminal"
     },
+    // unbind, so it doesn't interfere with vim navigation on intellisense
+    {
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    // {
+    //     "key": "cmd+k+i",
+    //     "command": "editor.action.showHover",
+    //     "when": "editorTextFocus"
+    // },
     // {
     //     "key": "ctrl+`",
     //     "command": "-workbench.action.terminal.toggleTerminal"

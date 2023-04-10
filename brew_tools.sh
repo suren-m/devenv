@@ -1,6 +1,8 @@
 #!/bin/bash
 
 tools=(
+       "ansible"
+       "azure-cli"
        "bat"
        "ca-certificates"  
        "cocoapods"
@@ -18,10 +20,15 @@ tools=(
        "minikube"
        "nvm"
        "neovim"
+       "pyenv"
+       "pipenv"
+       "poetry"
        "ruby"
        "ripgrep"
        "rust-analyzer"
        "starship"
+       "terraform"
+       "vite"
        "watchexec"
        "zplug"
       )
