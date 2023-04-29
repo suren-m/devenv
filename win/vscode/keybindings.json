@@ -1,18 +1,15 @@
-// Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+`",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
+        "key": "ctrl+alt+h",
+        "command": "workbench.action.positionPanelLeft"
     },
     {
-        "key": "ctrl+oem_3",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
+        "key": "ctrl+alt+l",
+        "command": "workbench.action.positionPanelRight"
     },
     {
-        "key": "ctrl+oem_3",
-        "command": "-workbench.action.terminal.toggleTerminal"
+        "key": "ctrl+alt+j",
+        "command": "workbench.action.positionPanelBottom"
     },
     {
         "key": "ctrl+alt+m",
@@ -22,12 +19,33 @@
         "key": "shift+space",
         "command": "workbench.action.terminal.toggleTerminal"
     },
+    // unbind, so it doesn't interfere with vim navigation on intellisense
     {
-        "key": "ctrl+alt+l",
-        "command": "workbench.action.positionPanelRight"
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+alt+j",
-        "command": "workbench.action.positionPanelBottom"
-    }
+        "key": "shift+ctrl+n",
+        "command": "explorer.newFile"
+    },
+    // {
+    //     "key": "ctrl+k+i",
+    //     "command": "editor.action.showHover",
+    //     "when": "editorTextFocus"
+    // },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
 ]
