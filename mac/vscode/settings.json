@@ -30,9 +30,9 @@
     "vim.leader": "<space>",
     "vim.startInInsertMode" : false,
     "vim.handleKeys": {
-        // "<C-a>": false,
-        // "<C-c>": false,
-        // "<C-x>": false,
+        "<C-a>": false,
+        "<C-c>": false,
+        "<C-x>": false,
         //"<C-f>": false,
         //"<C-k>": false
     },
@@ -69,16 +69,16 @@
     },
     "github.copilot.enable": {
         "*": false,
-        "yaml": false,
         "plaintext": false,
         "markdown": false,
-        "scminput": false
+        "scminput": false,
+        "yaml": false,
+        "rust": false
     },
     "workbench.startupEditor": "none",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.cursorWidth": 2,
     "git.openRepositoryInParentFolders": "never",
     
 }
