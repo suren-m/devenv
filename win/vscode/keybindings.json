@@ -131,5 +131,11 @@
         "key": "ctrl+shift+]",
         "command": "-editor.unfold",
         "when": "editorTextFocus && foldingEnabled"
+    },
+    { // default paste action on selected text
+        "key": "ctrl+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
     }
+
 ]
