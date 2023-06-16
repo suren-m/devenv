@@ -35,17 +35,17 @@
     //     "when": "editorTextFocus"
     // },
     {
-        "key": "ctrl+j",
+        "key": "alt+j",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+j",
+        "key": "alt+j",
         "command": "workbench.action.terminal.focus",
         "when": "!terminalFocus"
     },
     {
-        "key": "ctrl+j",
+        "key": "alt+j",
         "command": "-workbench.action.terminal.toggleTerminal"
     },
     {
@@ -136,6 +136,40 @@
         "key": "ctrl+v",
         "command": "editor.action.clipboardPasteAction",
         "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "alt+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
     }
 
 ]
