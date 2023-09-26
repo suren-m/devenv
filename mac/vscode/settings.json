@@ -80,5 +80,6 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.macOptionIsMeta": true
     
 }
