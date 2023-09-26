@@ -80,6 +80,10 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     "git.openRepositoryInParentFolders": "never",
-    "terminal.integrated.macOptionIsMeta": true
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.macOptionIsMeta": true,
+    "editor.fontSize": 14,
+    "editor.fontFamily": "Hack Nerd Font, Menlo, Monaco, 'Courier New', monospace"
     
 }
