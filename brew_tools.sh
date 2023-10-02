@@ -46,7 +46,6 @@ brew install --cask rectangle
 brew install --cask unnaturalscrollwheels
 brew install --cask logseq
 brew install --cask iterm2
-brew install --cask alacritty
 brew install --cask drawio
 
 brew tap homebrew/cask-fonts
