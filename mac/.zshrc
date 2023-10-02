@@ -1,3 +1,5 @@
+# https://wiki.debian.org/Zsh
+
 # Aliases
 alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
@@ -18,8 +20,7 @@ autoload -Uz compinit
 compinit
 
 # zplug - manage plugins
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
+# for sourcing see .zprofile
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
@@ -48,11 +49,10 @@ if [ -f ~/.config/shell/zsh_config ]; then
     . ~/.config/shell/zsh_config
 fi
 
-PATH="$PATH:$HOME/tools/flutter/bin"
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# custom_config
+if [ -f ~/.customrc ]; then
+    . ~/.customrc
+fi
 
 # setup starship - Keep this at the end
 eval "$(starship init zsh)"
