@@ -20,7 +20,13 @@ autoload -Uz compinit
 compinit
 
 # zplug - manage plugins
-# for sourcing see .zprofile
+
+# source
+# init zplug (need it here for it to work in zellij)
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+# install
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
