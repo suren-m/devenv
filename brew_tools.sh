@@ -28,8 +28,10 @@ tools=(
        "rust-analyzer"
        "starship"
        "terraform"
+       "tokei"
        "vite"
        "watchexec"
+       "zellij"
        "zplug"
       )
 
@@ -39,6 +41,13 @@ for i in ${tools[@]}; do
 done
 
 echo "fonts"
+
+brew install --cask rectangle
+brew install --cask unnaturalscrollwheels
+brew install --cask logseq
+brew install --cask iterm2
+brew install --cask alacritty
+brew install --cask drawio
 
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
