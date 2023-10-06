@@ -32,13 +32,13 @@ require('packer').startup(function(use)
     },
   }
 
-  use { --file explorer
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
+--  use { --file explorer
+--    'nvim-tree/nvim-tree.lua',
+--    requires = {
+--      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+--    },
+--    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+--  }
   
   use { -- Autocompletion
     'hrsh7th/nvim-cmp',
@@ -84,7 +84,7 @@ require('packer').startup(function(use)
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
   use 'tpope/vim-sleuth' -- Detect tabstop and shiftwidth automatically
 
-  -- Fuzzy Finder (files, lsp, etc)
+  -- Fuzzy Finder (f,iles, lsp, etc)
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
@@ -191,7 +191,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
-require('nvim-tree').setup()
+--require('nvim-tree').setup()
 -- Set lualine as statusline
 -- See `:help lualine.txt`
 require('lualine').setup {
@@ -268,7 +268,7 @@ vim.keymap.set('n', '<leader>gs', require('telescope.builtin').git_status, { des
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'terraform', 'hcl', 'help' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'terraform', 'hcl' },
 
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
